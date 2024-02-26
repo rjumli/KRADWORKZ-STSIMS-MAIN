@@ -1,0 +1,316 @@
+{
+  "resources/fonts/boxicons.eot": {
+    "file": "assets/boxicons-c23887bb.eot",
+    "src": "resources/fonts/boxicons.eot"
+  },
+  "resources/fonts/boxicons.svg": {
+    "file": "assets/boxicons-3fe502d8.svg",
+    "src": "resources/fonts/boxicons.svg"
+  },
+  "resources/fonts/boxicons.ttf": {
+    "file": "assets/boxicons-47509a2d.ttf",
+    "src": "resources/fonts/boxicons.ttf"
+  },
+  "resources/fonts/boxicons.woff": {
+    "file": "assets/boxicons-d5d511cf.woff",
+    "src": "resources/fonts/boxicons.woff"
+  },
+  "resources/fonts/boxicons.woff2": {
+    "file": "assets/boxicons-4b87cbc7.woff2",
+    "src": "resources/fonts/boxicons.woff2"
+  },
+  "resources/fonts/hkgrotesk-bold.woff": {
+    "file": "assets/hkgrotesk-bold-b17c8386.woff",
+    "src": "resources/fonts/hkgrotesk-bold.woff"
+  },
+  "resources/fonts/hkgrotesk-light.eot": {
+    "file": "assets/hkgrotesk-light-d980392e.eot",
+    "src": "resources/fonts/hkgrotesk-light.eot"
+  },
+  "resources/fonts/hkgrotesk-light.woff": {
+    "file": "assets/hkgrotesk-light-e05026f2.woff",
+    "src": "resources/fonts/hkgrotesk-light.woff"
+  },
+  "resources/fonts/hkgrotesk-medium.eot": {
+    "file": "assets/hkgrotesk-medium-ba2cce1f.eot",
+    "src": "resources/fonts/hkgrotesk-medium.eot"
+  },
+  "resources/fonts/hkgrotesk-medium.woff": {
+    "file": "assets/hkgrotesk-medium-220567a0.woff",
+    "src": "resources/fonts/hkgrotesk-medium.woff"
+  },
+  "resources/fonts/hkgrotesk-regular.eot": {
+    "file": "assets/hkgrotesk-regular-7e08a468.eot",
+    "src": "resources/fonts/hkgrotesk-regular.eot"
+  },
+  "resources/fonts/hkgrotesk-regular.woff": {
+    "file": "assets/hkgrotesk-regular-52c22a93.woff",
+    "src": "resources/fonts/hkgrotesk-regular.woff"
+  },
+  "resources/fonts/hkgrotesk-semibold.eot": {
+    "file": "assets/hkgrotesk-semibold-eb495079.eot",
+    "src": "resources/fonts/hkgrotesk-semibold.eot"
+  },
+  "resources/fonts/hkgrotesk-semibold.woff": {
+    "file": "assets/hkgrotesk-semibold-fd554236.woff",
+    "src": "resources/fonts/hkgrotesk-semibold.woff"
+  },
+  "resources/fonts/la-brands-400.eot": {
+    "file": "assets/la-brands-400-c0e32387.eot",
+    "src": "resources/fonts/la-brands-400.eot"
+  },
+  "resources/fonts/la-brands-400.svg": {
+    "file": "assets/la-brands-400-4da18191.svg",
+    "src": "resources/fonts/la-brands-400.svg"
+  },
+  "resources/fonts/la-brands-400.ttf": {
+    "file": "assets/la-brands-400-fbc98702.ttf",
+    "src": "resources/fonts/la-brands-400.ttf"
+  },
+  "resources/fonts/la-brands-400.woff": {
+    "file": "assets/la-brands-400-14c63377.woff",
+    "src": "resources/fonts/la-brands-400.woff"
+  },
+  "resources/fonts/la-brands-400.woff2": {
+    "file": "assets/la-brands-400-ff70c9bc.woff2",
+    "src": "resources/fonts/la-brands-400.woff2"
+  },
+  "resources/fonts/la-regular-400.eot": {
+    "file": "assets/la-regular-400-7dc456f0.eot",
+    "src": "resources/fonts/la-regular-400.eot"
+  },
+  "resources/fonts/la-regular-400.svg": {
+    "file": "assets/la-regular-400-884ce19c.svg",
+    "src": "resources/fonts/la-regular-400.svg"
+  },
+  "resources/fonts/la-regular-400.ttf": {
+    "file": "assets/la-regular-400-4b6ab8d0.ttf",
+    "src": "resources/fonts/la-regular-400.ttf"
+  },
+  "resources/fonts/la-regular-400.woff": {
+    "file": "assets/la-regular-400-7711fabc.woff",
+    "src": "resources/fonts/la-regular-400.woff"
+  },
+  "resources/fonts/la-regular-400.woff2": {
+    "file": "assets/la-regular-400-51ca2c00.woff2",
+    "src": "resources/fonts/la-regular-400.woff2"
+  },
+  "resources/fonts/la-solid-900.eot": {
+    "file": "assets/la-solid-900-8a57f8a9.eot",
+    "src": "resources/fonts/la-solid-900.eot"
+  },
+  "resources/fonts/la-solid-900.svg": {
+    "file": "assets/la-solid-900-0ce0cc40.svg",
+    "src": "resources/fonts/la-solid-900.svg"
+  },
+  "resources/fonts/la-solid-900.ttf": {
+    "file": "assets/la-solid-900-07ce3559.ttf",
+    "src": "resources/fonts/la-solid-900.ttf"
+  },
+  "resources/fonts/la-solid-900.woff": {
+    "file": "assets/la-solid-900-a0d21b2a.woff",
+    "src": "resources/fonts/la-solid-900.woff"
+  },
+  "resources/fonts/la-solid-900.woff2": {
+    "file": "assets/la-solid-900-10a68e01.woff2",
+    "src": "resources/fonts/la-solid-900.woff2"
+  },
+  "resources/fonts/materialdesignicons-webfont.eot": {
+    "file": "assets/materialdesignicons-webfont-67d24abe.eot",
+    "src": "resources/fonts/materialdesignicons-webfont.eot"
+  },
+  "resources/fonts/materialdesignicons-webfont.ttf": {
+    "file": "assets/materialdesignicons-webfont-a58ecb54.ttf",
+    "src": "resources/fonts/materialdesignicons-webfont.ttf"
+  },
+  "resources/fonts/materialdesignicons-webfont.woff": {
+    "file": "assets/materialdesignicons-webfont-80bb28b3.woff",
+    "src": "resources/fonts/materialdesignicons-webfont.woff"
+  },
+  "resources/fonts/materialdesignicons-webfont.woff2": {
+    "file": "assets/materialdesignicons-webfont-c1c004a9.woff2",
+    "src": "resources/fonts/materialdesignicons-webfont.woff2"
+  },
+  "resources/fonts/remixicon.eot": {
+    "file": "assets/remixicon-25af6e92.eot",
+    "src": "resources/fonts/remixicon.eot"
+  },
+  "resources/fonts/remixicon.svg": {
+    "file": "assets/remixicon-c728a748.svg",
+    "src": "resources/fonts/remixicon.svg"
+  },
+  "resources/fonts/remixicon.ttf": {
+    "file": "assets/remixicon-4022c89b.ttf",
+    "src": "resources/fonts/remixicon.ttf"
+  },
+  "resources/fonts/remixicon.woff": {
+    "file": "assets/remixicon-52976819.woff",
+    "src": "resources/fonts/remixicon.woff"
+  },
+  "resources/fonts/remixicon.woff2": {
+    "file": "assets/remixicon-b0d0b7e5.woff2",
+    "src": "resources/fonts/remixicon.woff2"
+  },
+  "resources/images/auth-one-bg.jpg": {
+    "file": "assets/auth-one-bg-78b82083.jpg",
+    "src": "resources/images/auth-one-bg.jpg"
+  },
+  "resources/images/brands/bitbucket.png": {
+    "file": "assets/bitbucket-67a996b1.png",
+    "src": "resources/images/brands/bitbucket.png"
+  },
+  "resources/images/brands/dribbble.png": {
+    "file": "assets/dribbble-a29e9e23.png",
+    "src": "resources/images/brands/dribbble.png"
+  },
+  "resources/images/brands/dropbox.png": {
+    "file": "assets/dropbox-5a804c70.png",
+    "src": "resources/images/brands/dropbox.png"
+  },
+  "resources/images/brands/github.png": {
+    "file": "assets/github-ccf4fac2.png",
+    "src": "resources/images/brands/github.png"
+  },
+  "resources/images/brands/mail_chimp.png": {
+    "file": "assets/mail_chimp-5b9280cc.png",
+    "src": "resources/images/brands/mail_chimp.png"
+  },
+  "resources/images/brands/slack.png": {
+    "file": "assets/slack-77593d61.png",
+    "src": "resources/images/brands/slack.png"
+  },
+  "resources/images/chat-bg-pattern.png": {
+    "file": "assets/chat-bg-pattern-e3e4de96.png",
+    "src": "resources/images/chat-bg-pattern.png"
+  },
+  "resources/images/cover-pattern.png": {
+    "file": "assets/cover-pattern-ca1c8533.png",
+    "src": "resources/images/cover-pattern.png"
+  },
+  "resources/images/flags/ph.svg": {
+    "file": "assets/ph-3c2c5087.svg",
+    "src": "resources/images/flags/ph.svg"
+  },
+  "resources/images/flags/us.svg": {
+    "file": "assets/us-de148770.svg",
+    "src": "resources/images/flags/us.svg"
+  },
+  "resources/images/landing/bg-pattern.png": {
+    "file": "assets/bg-pattern-d91fd86d.png",
+    "src": "resources/images/landing/bg-pattern.png"
+  },
+  "resources/images/logo-dark.png": {
+    "file": "assets/logo-dark-d5a58cdc.png",
+    "src": "resources/images/logo-dark.png"
+  },
+  "resources/images/logo-light.png": {
+    "file": "assets/logo-light-f77cbfaa.png",
+    "src": "resources/images/logo-light.png"
+  },
+  "resources/images/logo-sm.png": {
+    "file": "assets/logo-sm-9714006c.png",
+    "src": "resources/images/logo-sm.png"
+  },
+  "resources/images/modal-bg.png": {
+    "file": "assets/modal-bg-f849fc08.png",
+    "src": "resources/images/modal-bg.png"
+  },
+  "resources/images/new.png": {
+    "file": "assets/new-f63d71af.png",
+    "src": "resources/images/new.png"
+  },
+  "resources/images/sidebar/img-1.jpg": {
+    "file": "assets/img-1-f2d8b78a.jpg",
+    "src": "resources/images/sidebar/img-1.jpg"
+  },
+  "resources/images/sidebar/img-2.jpg": {
+    "file": "assets/img-2-68e6fda9.jpg",
+    "src": "resources/images/sidebar/img-2.jpg"
+  },
+  "resources/images/sidebar/img-3.jpg": {
+    "file": "assets/img-3-d0db49dd.jpg",
+    "src": "resources/images/sidebar/img-3.jpg"
+  },
+  "resources/images/sidebar/img-4.jpg": {
+    "file": "assets/img-4-04b70876.jpg",
+    "src": "resources/images/sidebar/img-4.jpg"
+  },
+  "resources/images/users/user-dummy-img.jpg": {
+    "file": "assets/user-dummy-img-ca52c5cb.jpg",
+    "src": "resources/images/users/user-dummy-img.jpg"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-47530e07.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/logo-sm-9714006c.png",
+      "assets/logo-light-f77cbfaa.png",
+      "assets/logo-dark-d5a58cdc.png",
+      "assets/us-de148770.svg",
+      "assets/github-ccf4fac2.png",
+      "assets/bitbucket-67a996b1.png",
+      "assets/dribbble-a29e9e23.png",
+      "assets/dropbox-5a804c70.png",
+      "assets/mail_chimp-5b9280cc.png",
+      "assets/slack-77593d61.png",
+      "assets/ph-3c2c5087.svg",
+      "assets/img-1-f2d8b78a.jpg",
+      "assets/img-2-68e6fda9.jpg",
+      "assets/img-3-d0db49dd.jpg",
+      "assets/img-4-04b70876.jpg",
+      "assets/user-dummy-img-ca52c5cb.jpg",
+      "assets/hkgrotesk-light-d980392e.eot",
+      "assets/hkgrotesk-light-e05026f2.woff",
+      "assets/hkgrotesk-regular-7e08a468.eot",
+      "assets/hkgrotesk-regular-52c22a93.woff",
+      "assets/hkgrotesk-medium-ba2cce1f.eot",
+      "assets/hkgrotesk-medium-220567a0.woff",
+      "assets/hkgrotesk-semibold-eb495079.eot",
+      "assets/hkgrotesk-semibold-fd554236.woff",
+      "assets/hkgrotesk-bold-b17c8386.woff",
+      "assets/modal-bg-f849fc08.png",
+      "assets/auth-one-bg-78b82083.jpg",
+      "assets/cover-pattern-ca1c8533.png",
+      "assets/chat-bg-pattern-e3e4de96.png",
+      "assets/bg-pattern-d91fd86d.png",
+      "assets/new-f63d71af.png",
+      "assets/materialdesignicons-webfont-67d24abe.eot",
+      "assets/materialdesignicons-webfont-c1c004a9.woff2",
+      "assets/materialdesignicons-webfont-80bb28b3.woff",
+      "assets/materialdesignicons-webfont-a58ecb54.ttf",
+      "assets/boxicons-c23887bb.eot",
+      "assets/boxicons-4b87cbc7.woff2",
+      "assets/boxicons-d5d511cf.woff",
+      "assets/boxicons-47509a2d.ttf",
+      "assets/boxicons-3fe502d8.svg",
+      "assets/la-brands-400-c0e32387.eot",
+      "assets/la-brands-400-ff70c9bc.woff2",
+      "assets/la-brands-400-14c63377.woff",
+      "assets/la-brands-400-fbc98702.ttf",
+      "assets/la-brands-400-4da18191.svg",
+      "assets/la-regular-400-7dc456f0.eot",
+      "assets/la-regular-400-51ca2c00.woff2",
+      "assets/la-regular-400-7711fabc.woff",
+      "assets/la-regular-400-4b6ab8d0.ttf",
+      "assets/la-regular-400-884ce19c.svg",
+      "assets/la-solid-900-8a57f8a9.eot",
+      "assets/la-solid-900-10a68e01.woff2",
+      "assets/la-solid-900-a0d21b2a.woff",
+      "assets/la-solid-900-07ce3559.ttf",
+      "assets/la-solid-900-0ce0cc40.svg",
+      "assets/remixicon-25af6e92.eot",
+      "assets/remixicon-b0d0b7e5.woff2",
+      "assets/remixicon-52976819.woff",
+      "assets/remixicon-4022c89b.ttf",
+      "assets/remixicon-c728a748.svg"
+    ],
+    "css": [
+      "assets/app-47530e07.css"
+    ],
+    "file": "assets/app-3a7e39e2.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
