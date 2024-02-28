@@ -379,6 +379,42 @@ class ListDropdownsTableSeeder extends Seeder
                 'color' => 'n/a',
                 'others' => 'n/a',
             ),
+            40 => 
+            array (
+                'id' => 41,
+                'name' => 'Center of Excellence',
+                'classification' => 'Certification',
+                'type' => 'n/a',
+                'color' => 'n/a',
+                'others' => 'COE',
+            ),
+            41 => 
+            array (
+                'id' => 42,
+                'name' => 'Center of Development',
+                'classification' => 'Certification',
+                'type' => 'n/a',
+                'color' => 'n/a',
+                'others' => 'COD',
+            ),
+            42 => 
+            array (
+                'id' => 43,
+                'name' => 'FAAP Level III',
+                'classification' => 'Certification',
+                'type' => 'n/a',
+                'color' => 'n/a',
+                'others' => 'III',
+            ),
+            43 => 
+            array (
+                'id' => 44,
+                'name' => 'FAAP Level IV',
+                'classification' => 'Certification',
+                'type' => 'n/a',
+                'color' => 'n/a',
+                'others' => 'IV',
+            ),
         ));
         
         

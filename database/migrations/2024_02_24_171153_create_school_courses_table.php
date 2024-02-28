@@ -15,9 +15,10 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->tinyInteger('years');
-            $table->string('type')->default('n/a');
-            $table->string('certification')->default('n/a');
-            $table->string('validity')->default('n/a');
+            $table->date('start_at')->nullable();
+            $table->date('end_at')->nullable();
+            $table->tinyInteger('certification_id')->unsigned()->index();
+            $table->foreign('certification_id')->references('id')->on('list_dropdowns')->onDelete('cascade');
             $table->integer('school_id')->unsigned()->index();
             $table->foreign('school_id')->references('id')->on('school_campuses')->onDelete('cascade');
             $table->integer('course_id')->unsigned()->index();

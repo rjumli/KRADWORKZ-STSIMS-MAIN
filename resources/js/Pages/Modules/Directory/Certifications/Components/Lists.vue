@@ -18,11 +18,11 @@
             <thead class="table-light">
                 <tr class="fs-11">
                     <th></th>
-                    <th style="width: 40%;">Name</th>
-                    <th style="width: 11%;" class="text-center">Class</th>
-                    <th style="width: 11%;" class="text-center">Term</th>
-                    <th style="width: 11%;" class="text-center">Grading</th>
-                    <th style="width: 10%;" class="text-center">Assigned Region</th>
+                    <th style="width: 25%;">School</th>
+                    <th style="width: 25%;" class="text-center">Course</th>
+                    <th style="width: 10%;" class="text-center">Certification</th>
+                    <th style="width: 10%;" class="text-center">Validity</th>
+                    <th style="width: 10;" class="text-center">Years</th>
                     <th style="width: 10%;" class="text-center">Status</th>
                     <th style="width: 5%;"></th>
                 </tr>
@@ -61,7 +61,7 @@
         </table>
         <Pagination class="ms-2 me-2" v-if="meta" @fetch="fetch" :lists="lists.length" :links="links" :pagination="meta" />
     </div>
-    <Create :regions="regions" :dropdowns="dropdowns" ref="create"/>
+    <Create :certifications="certifications" ref="create"/>
 </template>
 <script>
 import _ from 'lodash';
@@ -69,7 +69,7 @@ import Create from '../Modals/Create.vue';
 import Pagination from "@/Shared/Components/Pagination.vue";
 export default {
     components: { Pagination, Create },
-    props: ['regions','dropdowns'],
+    props: ['certifications'],
     data(){
         return {
             lists: [],
@@ -102,7 +102,7 @@ export default {
             this.fetch();
         }, 300),
         fetch(page_url){
-            page_url = page_url || '/directory/schools';
+            page_url = page_url || '/directory/certifications';
             axios.get(page_url,{
                 params : {
                     keyword: this.filter.keyword,

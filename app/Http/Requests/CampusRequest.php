@@ -22,7 +22,15 @@ class CampusRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'campus' => 'sometimes|required',
+            'address' => 'sometimes|required',
+            'region_code' => 'sometimes|required',
+            'province_code' => 'sometimes|required',
+            'municipality_code' => 'sometimes|required',
+            'term_id' => 'sometimes|required',
+            'grading_id' => 'sometimes|required',
+            'school_id' => 'sometimes|required',
+            'assigned_region' => 'sometimes|required',
         ];
     }
 }
