@@ -18,7 +18,8 @@ class UserProfile extends Model
         'middlename',
         'gender',
         'mobile',
-        'user_id'
+        'user_id',
+        'agency_id'
     ];
 
     public function setFirstnameAttribute($value)

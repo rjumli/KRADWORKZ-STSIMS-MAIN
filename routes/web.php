@@ -27,6 +27,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     }); 
 
     Route::prefix('lists')->group(function(){
+        Route::resource('/agencies', App\Http\Controllers\Lists\AgencyController::class);
         Route::resource('/locations', App\Http\Controllers\Lists\LocationController::class);
         Route::resource('/dropdowns', App\Http\Controllers\Lists\DropdownController::class);
     }); 

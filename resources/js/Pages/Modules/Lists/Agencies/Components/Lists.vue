@@ -3,7 +3,7 @@
         <b-col lg>
             <div class="input-group mb-1">
                 <span class="input-group-text"> <i class="ri-search-line search-icon"></i></span>
-                <input type="text" v-model="filter.keyword" placeholder="Search School Campus" class="form-control" style="width: 35%;">
+                <input type="text" v-model="filter.keyword" placeholder="Search Agency" class="form-control" style="width: 35%;">
                 <span @click="refresh" class="input-group-text" v-b-tooltip.hover title="Refresh" style="cursor: pointer;"> 
                     <i class="bx bx-refresh search-icon"></i>
                 </span>
@@ -18,11 +18,11 @@
             <thead class="table-light">
                 <tr class="fs-11">
                     <th></th>
-                    <th style="width: 25%;">School</th>
-                    <th style="width: 22%;" class="text-center">Course</th>
-                    <th style="width: 15%;" class="text-center">Certification</th>
-                    <th style="width: 15%;" class="text-center">Validity</th>
-                    <th style="width: 12;" class="text-center">Years</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 15%;" class="text-center">Acronym</th>
+                    <th style="width: 15%;" class="text-center">Code</th>
+                    <th style="width: 15%;" class="text-center">Website</th>
+                    <th style="width: 15%;" class="text-center">Region</th>
                     <th style="width: 10%;" class="text-center">Status</th>
                     <th style="width: 5%;"></th>
                 </tr>
@@ -30,11 +30,11 @@
             <tbody>
                 <tr v-for="(list,index) in lists" v-bind:key="index">
                     <td>{{ (meta.current_page - 1) * meta.per_page + index + 1 }}</td>
-                    <td>{{list.school}}</td>
-                    <td class="text-center">{{list.course}}</td>
-                    <td class="text-center">{{list.certification}}</td>
-                    <td class="text-center">{{list.end_at}}</td>
-                    <td class="text-center">{{list.years}}</td>
+                    <td>{{list.name}}</td>
+                    <td class="text-center">{{list.acronym}}</td>
+                    <td class="text-center">{{list.code}}</td>
+                    <td class="text-center">{{list.website}}</td>
+                     <td class="text-center">{{list.region.region}}</td>
                     <td class="text-center">
                         <span v-if="list.is_active" class="badge bg-success">Active</span>
                         <span v-else class="badge bg-danger">Inactive</span>
@@ -52,7 +52,7 @@
         </table>
         <Pagination class="ms-2 me-2" v-if="meta" @fetch="fetch" :lists="lists.length" :links="links" :pagination="meta" />
     </div>
-    <Create :certifications="certifications" :years="years" ref="create"/>
+    <Create :regions="regions" ref="create"/>
 </template>
 <script>
 import _ from 'lodash';
@@ -60,7 +60,7 @@ import Create from '../Modals/Create.vue';
 import Pagination from "@/Shared/Components/Pagination.vue";
 export default {
     components: { Pagination, Create },
-    props: ['certifications','years'],
+    props: ['regions'],
     data(){
         return {
             lists: [],
@@ -93,11 +93,11 @@ export default {
             this.fetch();
         }, 300),
         fetch(page_url){
-            page_url = page_url || '/directory/certifications';
+            page_url = page_url || '/lists/agencies';
             axios.get(page_url,{
                 params : {
                     keyword: this.filter.keyword,
-                    count: ((window.innerHeight-350)/59),
+                    count: ((window.innerHeight-350)/51),
                     option: 'lists'
                 }
             })

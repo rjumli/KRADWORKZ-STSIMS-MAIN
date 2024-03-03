@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Traits\HandlesTransaction;
 use App\Services\Directory\CertificationService;
+use App\Http\Requests\CertificationRequest;
 
 class CertificationController extends Controller
 {
@@ -22,7 +23,8 @@ class CertificationController extends Controller
             break;
             default :
             return inertia('Modules/Directory/Certifications/Index',[
-                'certifications' => $this->certification->dropdowns()
+                'certifications' => $this->certification->dropdowns(),
+                'years' => $this->certification->years()
             ]);
         }
     }

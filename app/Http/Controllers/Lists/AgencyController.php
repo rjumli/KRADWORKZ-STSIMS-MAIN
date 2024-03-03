@@ -1,37 +1,37 @@
 <?php
 
-namespace App\Http\Controllers\Directory;
+namespace App\Http\Controllers\Lists;
 
 use App\Http\Controllers\Controller;
-use App\Services\Directory\CourseService;
 use Illuminate\Http\Request;
 use App\Traits\HandlesTransaction;
-use App\Http\Requests\CourseRequest;
+use App\Services\Lists\AgencyService;
+use App\Http\Requests\AgencyRequest;
 
-class CourseController extends Controller
+class AgencyController extends Controller
 {
     use HandlesTransaction;
 
-    public function __construct(CourseService $course){
-        $this->course = $course;
+    public function __construct(AgencyService $agency){
+        $this->agency = $agency;
     }
 
     public function index(Request $request){
-        switch($request->option){
+        $options = $request->option;
+        switch($options){
             case 'lists':
-                return $this->course->lists($request);
+                return $this->agency->lists($request);
             break;
-            case 'dropdowns':
-                return $this->course->list_courses($request);
-            break;
-            default :
-            return inertia('Modules/Directory/Courses/Index');
+            default: 
+            return inertia('Modules/Lists/Agencies/Index',[
+                'regions' => $this->agency->regions()
+            ]);
         }
     }
 
-    public function store(CourseRequest $request){
+    public function store(AgencyRequest $request){
         $result = $this->handleTransaction(function () use ($request) {
-            return $this->course->save($request);
+            return $this->agency->save($request);
         });
 
         return back()->with([
@@ -44,7 +44,7 @@ class CourseController extends Controller
 
     public function update(Request $request){
         $result = $this->handleTransaction(function () use ($request) {
-            return $this->course->update($request);
+            return $this->agency->update($request);
         });
 
         return back()->with([

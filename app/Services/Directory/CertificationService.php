@@ -11,6 +11,7 @@ class CertificationService
     public function lists($request){
         $data = CertificationResource::collection(
             SchoolCourse::query()
+            ->with('course','school.school','certification')
             ->when($request->keyword, function ($query, $keyword) {
                 $query->where('name', 'LIKE', "%{$keyword}%")->orWhere('shortcut', 'LIKE', "%{$keyword}%");
             })
@@ -55,5 +56,15 @@ class CertificationService
             ];
         });
         return $data;
+    }
+
+    public function years(){
+        return [
+            ['value' => 1, 'name' => '1 year'],
+            ['value' => 2, 'name' => '2 years'],
+            ['value' => 3, 'name' => '3 years'],
+            ['value' => 4, 'name' => '4 years'],
+            ['value' => 5, 'name' => '5 years']
+        ];
     }
 }

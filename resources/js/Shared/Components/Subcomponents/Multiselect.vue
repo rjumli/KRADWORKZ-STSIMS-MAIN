@@ -3,6 +3,7 @@
     v-model="selectedValues" 
     :options="options" label="name"
     :placeholder="placeholder"
+    :searchable="searchable"
     @update:modelValue="emitSelectedValues" 
    :style="'border-color: ' + (message ? '#f06548' : '#ced4da') + ' !important; '"/>
 </template>
@@ -10,7 +11,7 @@
 import Multiselect from "@vueform/multiselect";
 export default {
     components: { Multiselect },
-    props: ['options','modelValue','message','placeholder'],
+    props: ['options','modelValue','message','placeholder','searchable'],
     data() {
         return {
             selectedValues: this.modelValue
@@ -25,7 +26,7 @@ export default {
 }
 </script>
 <style>
-.multiselect-wrapper {
-  background-color: #f5f6f7;
-}
+    .multiselect-wrapper {
+        background-color: #f5f6f7;
+    }
 </style>

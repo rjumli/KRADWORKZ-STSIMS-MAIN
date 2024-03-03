@@ -45,4 +45,20 @@ class CourseService
             'info' => "You've successfully updated the selected course."
         ];
     }
+
+    public function list_courses($request){
+        $keyword = $request->keyword;
+        if(!empty($keyword)){
+            $data = ListCourse::where('name', 'LIKE', '%'.$keyword.'%')
+            ->orWhere('shortcut', 'LIKE', '%'.$keyword.'%')->get()->map(function ($item) {
+                return [
+                    'value' => $item->id,
+                    'name' => ($item->name) ? $item->name : $item->shortcut
+                ];
+            });
+        }else{
+            $data = [];
+        }
+        return $data;
+    }
 }

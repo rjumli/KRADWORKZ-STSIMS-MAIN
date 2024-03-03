@@ -162,6 +162,19 @@ class ListMenusTableSeeder extends Seeder
                 'is_mother' => 0,
                 'is_active' => 1,
             ),
+            11 => 
+            array (
+                'id' => 12,
+                'name' => 'Agencies',
+                'icon' => 'ri-government-line',
+                'route' => '/lists/agencies',
+                'path' => 'Modules/Lists/Agencies',
+                'group' => 'Lists',
+                'order' => 5,
+                'has_child' => 0,
+                'is_mother' => 1,
+                'is_active' => 1,
+            ),
         ));
         
         

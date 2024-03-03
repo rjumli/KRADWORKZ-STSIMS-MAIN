@@ -227,7 +227,7 @@ export default {
             </BDropdownItem>
           </BDropdown>
 
-          <BDropdown class="dropdown" variant="ghost-secondary" dropstart
+          <!-- <BDropdown class="dropdown" variant="ghost-secondary" dropstart
             :offset="{ alignmentAxis: 55, crossAxis: 15, mainAxis: -50 }"
             toggle-class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle arrow-none"
             menu-class="dropdown-menu-end">
@@ -240,9 +240,9 @@ export default {
               <img :src="entry.flag" alt="user-image" class="me-2 rounded" height="18">
               <span class="align-middle">{{ entry.title }}</span>
             </BLink>
-          </BDropdown>
+          </BDropdown> -->
 
-          <BDropdown class="dropdown" variant="ghost-secondary" dropstart
+          <!-- <BDropdown class="dropdown" variant="ghost-secondary" dropstart
             :offset="{ alignmentAxis: 57, crossAxis: 0, mainAxis: -42 }"
             toggle-class="btn-icon btn-topbar rounded-circle mode-layout ms-1 arrow-none"
             menu-class="p-0 dropdown-menu-end">
@@ -306,7 +306,7 @@ export default {
                 </BCol>
               </BRow>
             </div>
-          </BDropdown>
+          </BDropdown> -->
 
        
 
