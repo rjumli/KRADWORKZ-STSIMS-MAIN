@@ -155,30 +155,6 @@
     "file": "assets/auth-one-bg-78b82083.jpg",
     "src": "resources/images/auth-one-bg.jpg"
   },
-  "resources/images/brands/bitbucket.png": {
-    "file": "assets/bitbucket-67a996b1.png",
-    "src": "resources/images/brands/bitbucket.png"
-  },
-  "resources/images/brands/dribbble.png": {
-    "file": "assets/dribbble-a29e9e23.png",
-    "src": "resources/images/brands/dribbble.png"
-  },
-  "resources/images/brands/dropbox.png": {
-    "file": "assets/dropbox-5a804c70.png",
-    "src": "resources/images/brands/dropbox.png"
-  },
-  "resources/images/brands/github.png": {
-    "file": "assets/github-ccf4fac2.png",
-    "src": "resources/images/brands/github.png"
-  },
-  "resources/images/brands/mail_chimp.png": {
-    "file": "assets/mail_chimp-5b9280cc.png",
-    "src": "resources/images/brands/mail_chimp.png"
-  },
-  "resources/images/brands/slack.png": {
-    "file": "assets/slack-77593d61.png",
-    "src": "resources/images/brands/slack.png"
-  },
   "resources/images/chat-bg-pattern.png": {
     "file": "assets/chat-bg-pattern-e3e4de96.png",
     "src": "resources/images/chat-bg-pattern.png"
@@ -200,15 +176,15 @@
     "src": "resources/images/landing/bg-pattern.png"
   },
   "resources/images/logo-dark.png": {
-    "file": "assets/logo-dark-d5a58cdc.png",
+    "file": "assets/logo-dark-366e507d.png",
     "src": "resources/images/logo-dark.png"
   },
   "resources/images/logo-light.png": {
-    "file": "assets/logo-light-f77cbfaa.png",
+    "file": "assets/logo-light-fdc5a7f1.png",
     "src": "resources/images/logo-light.png"
   },
   "resources/images/logo-sm.png": {
-    "file": "assets/logo-sm-9714006c.png",
+    "file": "assets/logo-sm-c538c912.png",
     "src": "resources/images/logo-sm.png"
   },
   "resources/images/modal-bg.png": {
@@ -240,21 +216,15 @@
     "src": "resources/images/users/user-dummy-img.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-47530e07.css",
+    "file": "assets/app-64f7c57c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "assets": [
-      "assets/logo-sm-9714006c.png",
-      "assets/logo-light-f77cbfaa.png",
-      "assets/logo-dark-d5a58cdc.png",
+      "assets/logo-sm-c538c912.png",
+      "assets/logo-light-fdc5a7f1.png",
+      "assets/logo-dark-366e507d.png",
       "assets/us-de148770.svg",
-      "assets/github-ccf4fac2.png",
-      "assets/bitbucket-67a996b1.png",
-      "assets/dribbble-a29e9e23.png",
-      "assets/dropbox-5a804c70.png",
-      "assets/mail_chimp-5b9280cc.png",
-      "assets/slack-77593d61.png",
       "assets/ph-3c2c5087.svg",
       "assets/img-1-f2d8b78a.jpg",
       "assets/img-2-68e6fda9.jpg",
@@ -307,9 +277,9 @@
       "assets/remixicon-c728a748.svg"
     ],
     "css": [
-      "assets/app-47530e07.css"
+      "assets/app-64f7c57c.css"
     ],
-    "file": "assets/app-3a7e39e2.js",
+    "file": "assets/app-6b76b0e0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
