@@ -37,7 +37,7 @@ defineProps({
                 </div>
                 <BCardBody class="p-4">
                   <div>
-                    <h5>Welcome to Velzon!</h5>
+                    <h5>Welcome to STSIMS!</h5>
                     <p class="text-muted">These terms and conditions outline the rules and regulations for the use of Company
                       Name's Website, located at Website.com.</p>
                     <p class="text-muted">By accessing this website we assume you accept these terms and conditions. Do not

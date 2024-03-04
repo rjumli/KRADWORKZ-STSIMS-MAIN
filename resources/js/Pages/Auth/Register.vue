@@ -71,7 +71,7 @@ export default {
                             <BCardBody class="p-4">
                                 <div class="text-center mt-2">
                                     <h5 class="text-primary">Create New Account</h5>
-                                    <p class="text-muted">Get your free velzon account now</p>
+                                    <p class="text-muted">Get your free stsims account now</p>
                                 </div>
                                 <div class="p-2 mt-4">
                                     <form @submit.prevent="submit" class="needs-validation" novalidate>
@@ -144,16 +144,6 @@ export default {
             </BContainer>
         </div>
 
-        <footer class="footer">
-            <BContainer>
-                <BRow>
-                    <BCol lg="12">
-                        <div class="text-center">
-                            <p class="mb-0 text-muted">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
-                        </div>
-                    </BCol>
-                </BRow>
-            </BContainer>
-        </footer>
+       
     </div>
 </template>
