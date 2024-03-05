@@ -22,6 +22,11 @@ class UserProfile extends Model
         'agency_id'
     ];
 
+    public function agency()
+    {
+        return $this->belongsTo('App\Models\ListAgency', 'agency_id', 'id');
+    }
+    
     public function setFirstnameAttribute($value)
     {
         $this->attributes['firstname'] = ucwords(strtolower($value));

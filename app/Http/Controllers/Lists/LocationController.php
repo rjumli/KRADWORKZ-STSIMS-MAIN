@@ -34,8 +34,8 @@ class LocationController extends Controller
             case 'list_municipality':
                 return $this->location->list_municipality($request->code);
             break;
-            case 'list_province':
-                return $this->location->list_province($request->code);
+            case 'list_barangay':
+                return $this->location->list_barangay($request->code);
             break;
             default : 
             return inertia('Modules/Lists/Locations/Index');

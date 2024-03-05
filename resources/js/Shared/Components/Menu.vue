@@ -33,7 +33,7 @@
                         <i :class="menu.main.icon"></i>
                         <span data-key="krad-dashboards">{{menu.main.name}}</span>
                     </Link>
-                    <Link v-else class="nav-link menu-link" :href="'#'+menu.main.name" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+                    <Link v-else class="nav-link menu-link" :href="'#'+menu.main.name" :class="{'active': $page.component.startsWith(menu.main.path) }" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
                         <i :class="menu.main.icon"></i>
                         <span data-key="krad-scholars">{{menu.main.name}}</span>
                     </Link>

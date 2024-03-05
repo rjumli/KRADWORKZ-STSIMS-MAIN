@@ -3,12 +3,15 @@
         <b-col lg>
             <div class="input-group mb-1">
                 <span class="input-group-text"> <i class="ri-search-line search-icon"></i></span>
-                <input type="text" v-model="filter.keyword" placeholder="Search School Campus" class="form-control" style="width: 35%;">
+                <input type="text" v-model="filter.keyword" placeholder="Search Scholar" class="form-control" style="width: 35%;">
+                <span @click="openUpload()" class="input-group-text" v-b-tooltip.hover title="Upload Scholars" style="cursor: pointer;"> 
+                    <i class="ri-upload-cloud-fill search-icon"></i>
+                </span>
                 <span @click="refresh" class="input-group-text" v-b-tooltip.hover title="Refresh" style="cursor: pointer;"> 
                     <i class="bx bx-refresh search-icon"></i>
                 </span>
-                <b-button type="button" variant="primary" @click="openCreate">
-                    <i class="ri-add-circle-fill align-bottom me-1"></i> Create
+                <b-button @click="openFilter()" type="button" variant="primary">
+                    <i class="ri-filter-fill search-icon"></i>
                 </b-button>
             </div>
         </b-col>
@@ -17,38 +20,37 @@
         <table class="table table-nowrap align-middle mb-0">
             <thead class="table-light">
                 <tr class="fs-11">
-                    <th></th>
-                    <th style="width: 40%;">Name</th>
-                    <th style="width: 11%;" class="text-center">Class</th>
-                    <th style="width: 11%;" class="text-center">Term</th>
-                    <th style="width: 11%;" class="text-center">Grading</th>
-                    <th style="width: 10%;" class="text-center">Assigned Region</th>
-                    <th style="width: 10%;" class="text-center">Status</th>
-                    <th style="width: 5%;"></th>
+                   <th></th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 15%;" class="text-center">Program</th>
+                    <th style="width: 15%;" class="text-center">Awarded Year</th>
+                    <th style="width: 15%;" class="text-center">School</th>
+                    <th style="width: 15%;" class="text-center">Status</th>
+                    <th style="width: 10%;"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(list,index) in lists" v-bind:key="index">
                     <td> 
                          <div class="avatar-xs chat-user-img online">
-                            <span v-if="list.avatar == 'school.jpg'" :class="'avatar-title rounded-circle bg-primary text-white'">{{list.name[0]}}</span>
-                            <img v-else src="@assets/images/users/avatar-1.jpg" alt="" class="avatar-xs rounded-circle">
-                            <span v-if="list.is_active" class="user-status text-success"></span>
+                            <img :src="currentUrl+'/images/avatars/'+list.profile.avatar" alt="" class="avatar-xs rounded-circle">
+                            <span :style="(list.profile.sex == 'M') ? 'background-color: #5cb0e5;' : 'background-color: #e55c7f;'" class="user-status text-success"></span>
                         </div>
                     </td>
                     <td>
-                        <h5 class="fs-13 mb-0 text-dark">{{list.name}}</h5>
-                        <p class="fs-12 text-muted mb-0">{{list.address}}</p>
+                        <h5 class="fs-12 mb-0 fw-semibold">{{list.profile.name}}</h5>
+                        <p class="fs-11 text-muted mb-0">{{list.spas_id}}</p>
                     </td>
-                    <td class="text-center">{{list.class}}</td>
-                    <td class="text-center">{{list.term.name}}</td>
-                    <td class="text-center">{{list.grading.name}}</td>
-                    <td class="text-center">{{list.assigned.region}}</td>
+                    <td class="text-center fs-12">{{list.program}} - {{list.subprogram}}</td>
+                    <td class="text-center fs-12">{{list.awarded_year}}</td>
                     <td class="text-center">
-                        <span v-if="list.is_active" class="badge bg-success">Active</span>
-                        <span v-else class="badge bg-danger">Inactive</span>
+                        <p class="fs-12 mb-n1 text-dark">{{(list.education.school instanceof Object) ? list.education.school.name : list.education.school}}</p>
+                        <p class="fs-12 text-muted mb-0">{{(list.education.course instanceof Object) ? list.education.course.shortcut : list.education.course}}</p>
                     </td>
-                    <td>
+                    <td class="text-center">
+                        <span :class="'badge '+list.status.color+' '+list.status.others">{{list.status.name}}</span>
+                    </td>
+                    <td class="text-end">
                         <b-button @click="openEdit(list,index)" variant="soft-info" v-b-tooltip.hover title="View" size="sm" class="me-1">
                             <i class="ri-eye-fill align-bottom"></i>
                         </b-button>
@@ -61,17 +63,20 @@
         </table>
         <Pagination class="ms-2 me-2" v-if="meta" @fetch="fetch" :lists="lists.length" :links="links" :pagination="meta" />
     </div>
-    <Create :regions="regions" :dropdowns="dropdowns" ref="create"/>
+    <Upload ref="upload" @status="fetch()"/>
+    <Filter :dropdowns="dropdowns" @filter="subfilter" ref="filter"/>
 </template>
 <script>
 import _ from 'lodash';
-import Create from '../Modals/Create.vue';
+import Filter from '../Modals/Filter.vue';
+import Upload from '../Modals/Upload.vue';
 import Pagination from "@/Shared/Components/Pagination.vue";
 export default {
-    components: { Pagination, Create },
-    props: ['regions','dropdowns'],
+    components: { Pagination, Upload, Filter },
+    props: ['dropdowns'],
     data(){
         return {
+            currentUrl: window.location.origin,
             lists: [],
             meta: {},
             links: {},
@@ -102,12 +107,13 @@ export default {
             this.fetch();
         }, 300),
         fetch(page_url){
-            page_url = page_url || '/directory/schools';
+            page_url = page_url || '/scholars/lists';
             axios.get(page_url,{
                 params : {
                     keyword: this.filter.keyword,
+                    subfilters: this.subfilters,
                     count: ((window.innerHeight-350)/59),
-                    option: 'campuses'
+                    option: 'lists'
                 }
             })
             .then(response => {
@@ -119,13 +125,16 @@ export default {
             })
             .catch(err => console.log(err));
         },
-        openCreate(){
-            this.$refs.create.show();
+        openUpload(){
+            this.$refs.upload.show();
         },
-        openEdit(data,index){
-            this.index = index;
-            this.$refs.create.edit(data);
-        }
+        openFilter(){
+            this.$refs.filter.show();
+        },
+        subfilter(list){
+            this.subfilters = (Object.keys(list).length == 0) ? '-' : JSON.stringify(list);
+            this.fetch();
+        },
     }
 }
 </script>

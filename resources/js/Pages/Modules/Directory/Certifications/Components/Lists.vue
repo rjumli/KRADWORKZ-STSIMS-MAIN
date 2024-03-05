@@ -33,7 +33,7 @@
                     <td>{{list.school}}</td>
                     <td class="text-center">{{list.course}}</td>
                     <td class="text-center">{{list.certification}}</td>
-                    <td class="text-center">{{list.end_at}}</td>
+                    <td class="text-center">{{list.validity}}</td>
                     <td class="text-center">{{list.years}}</td>
                     <td class="text-center">
                         <span v-if="list.is_active" class="badge bg-success">Active</span>

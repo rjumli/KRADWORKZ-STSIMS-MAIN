@@ -55,4 +55,23 @@ class UserService
             'info' => "You've successfully updated the selected user."
         ];
     }
+
+    public function token($request){
+        $user = User::findOrFail($request->id);
+        $user->tokens()->delete();
+        $token = $user->createToken('kradworkz')->plainTextToken;
+        $id = $user->profile->agency->id;
+        $url = $request->url;
+        $data = $id.' '.$url.' '.$token;
+        return $this->simpleEncrypt($data);
+    }
+
+    public function simpleEncrypt($data) {
+        $key = "KradWorkZ";
+        $result = '';
+        for ($i = 0; $i < strlen($data); $i++) {
+            $result .= $data[$i] ^ $key[$i % strlen($key)];
+        }
+        return base64_encode($result);
+    }
 }

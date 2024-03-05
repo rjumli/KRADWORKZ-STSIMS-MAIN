@@ -39,7 +39,7 @@
                                 <h5 class="mb-1 fs-14 text-primary">Login & Recovery</h5>
                                 <p class="text-muted fs-12">Manage your passwords, login preferences and recovery methods.</p>
                                 <b-list-group>
-                                    <BListGroupItem @click="openModal('password')" tag="button" class="list-group-item-action"><i class="ri-lock-password-fill me-2"></i>Change Password <span class="text-muted fs-10 float-end">Updated {{logins.password_changed_at}}</span></BListGroupItem>
+                                    <BListGroupItem @click="openModal('password')" tag="button" class="list-group-item-action"><i class="ri-lock-password-fill me-2"></i>Change Password <span class="text-muted fs-10 float-end">{{(logins) ? 'Updated '+logins.password_changed_at : 'Never updated'}}</span></BListGroupItem>
                                     <BListGroupItem @click="openModal('twofactor')" tag="button" class="list-group-item-action"><i class="ri-shield-keyhole-fill me-2"></i>Two-factor Aunthentication <span v-if="$page.props.auth.user.two_factor_enabled" class="badge bg-success-subtle text-success float-end">Enabled</span><span v-else class="badge bg-danger-subtle text-danger float-end">Disabled</span></BListGroupItem>
                                     <BListGroupItem @click="openModal('session')" tag="button" class="list-group-item-action"><i class="ri-window-fill me-2"></i>Browser Sessions</BListGroupItem>
                                 </b-list-group>

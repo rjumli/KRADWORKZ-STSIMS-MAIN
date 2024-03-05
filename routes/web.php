@@ -20,6 +20,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         Route::get('/', 'dashboard');
     });
 
+    Route::prefix('scholars')->group(function(){
+        Route::resource('/lists', App\Http\Controllers\Scholars\ListsController::class);
+        Route::resource('/qualifiers', App\Http\Controllers\Scholars\QualifierController::class);
+        Route::resource('/endorsements', App\Http\Controllers\Scholars\EndorsementController::class);
+    }); 
+
     Route::prefix('directory')->group(function(){
         Route::resource('/certifications', App\Http\Controllers\Directory\CertificationController::class);
         Route::resource('/schools', App\Http\Controllers\Directory\SchoolController::class);

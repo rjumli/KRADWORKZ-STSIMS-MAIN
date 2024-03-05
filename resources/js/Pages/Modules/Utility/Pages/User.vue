@@ -58,7 +58,10 @@
                                     <b-button variant="soft-warning" @click="openActivation('verification',list,index)" v-b-tooltip.hover title="Verify" size="sm" class="remove-list me-1">
                                         <i class="ri-mail-send-fill align-bottom"></i>
                                     </b-button>
-                                    <b-button @click="openEdit(list,index)" variant="soft-primary" v-b-tooltip.hover title="Edit" size="sm" class="edit-list">
+                                    <b-button variant="soft-danger" @click="openApi(list)" v-b-tooltip.hover title="Api Key" size="sm" class="remove-list me-1">
+                                        <i class="ri-shield-keyhole-fill align-bottom"></i>
+                                    </b-button>
+                                    <b-button variant="soft-primary" @click="openEdit(list,index)" v-b-tooltip.hover title="Edit" size="sm" class="edit-list">
                                         <i class="ri-pencil-fill align-bottom"></i>
                                     </b-button>
                                 </td>
@@ -70,12 +73,14 @@
             </BCardBody>
         </BCard>
     </form>
+    <Api ref="api"/>
     <Create ref="create"/>
     <Activation ref="activation"/>
 </div>
 </template>
 <script>
 import _ from 'lodash';
+import Api from '../Modals/Users/Api.vue';
 import Create from '../Modals/Users/Create.vue';
 import Layout from "@/Shared/Layouts/Main.vue";
 import profile from "@/Pages/Modules/Utility/Index.vue";
@@ -87,7 +92,7 @@ export default {
             h(profile,[page])
         ])
     },
-    components: { Create, Pagination, Activation },
+    components: { Create, Pagination, Activation, Api },
     data(){
         return {
             currentUrl: window.location.origin,
@@ -142,6 +147,9 @@ export default {
         openActivation(type,data,index){
             this.index = index;
             this.$refs.activation.show(type,data);
+        },
+        openApi(data){
+            this.$refs.api.show(data);
         },
         openEdit(data,index){
             this.index = index;

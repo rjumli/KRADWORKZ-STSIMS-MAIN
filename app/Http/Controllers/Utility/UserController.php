@@ -24,6 +24,9 @@ class UserController extends Controller
             case 'lists':
                 return $this->user->lists($request);
             break;
+            case 'token':
+                return $this->user->token($request);
+            break;
             case 'logs':
                return $this->logs($request);
             break;
